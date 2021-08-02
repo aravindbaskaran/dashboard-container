@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# we remain on the bleeding edge until we get closer to beta ready
+package-lock.json

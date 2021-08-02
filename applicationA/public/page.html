@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe src="http://localhost:8080/page.html" name="appB" id="appB"></iframe>
+
+    <script type="text/javascript">
+      let win = window.frames.appB;
+      console.log(appB);
+      setTimeout(function(){
+          // appB.postMessage("hi", "http://localhost:5000");
+          appB.contentWindow.postMessage("hi from A", "http://localhost:8080");
+        }, 2000);
+      
+      // win.postMessage("message", "http://localhost:5000/page.html");
+      window.addEventListener('message', function(event) {
+          alert(`Received ${event}`);
+      });
+    </script>
+</body>
+</html>

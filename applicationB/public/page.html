@@ -9,11 +9,15 @@
 <body>
     <script type="text/javascript">
         window.addEventListener("message", (event) => {
+            if (event.origin != 'http://localhost:8080'){
+                return;
+            }
         console.log('from app B', event.source);
         console.log(event.source);
             // window.parent.postMessage("Hi back from B!!!!!!!", "*");
             
       }, false);
     </script>
+    <div><h2>Welcome B!</h2></div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 `$npm i -g http-server`
 
-##### start the server and bind the port 8080 to page.html
+##### start the server and bind the port to page.html
 
 ##### start applicationA
 

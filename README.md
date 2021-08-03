@@ -6,11 +6,11 @@
 
 ##### start the server and bind the port to page.html
 
-##### start applicationA
+##### start applicationA on a seperate terminal
 
 `http-server -p 8080 ./public`
 
-##### start applicationB
+##### start applicationB on a seperate terminal
 
 `http-server -p 5000 ./public`
 
@@ -27,3 +27,6 @@
 [Cross communication](https://javascript.info/cross-window-communication)
 
  
+*Note: *
+ - Need to add instructions for other os environments (windows).
+ - Anyone interested in adding the above documentation is most welcomed!

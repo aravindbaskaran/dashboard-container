@@ -27,6 +27,6 @@
 [Cross communication](https://javascript.info/cross-window-communication)
 
  
-*Note: *
+**Note:**
  - Need to add instructions for other os environments (windows).
  - Anyone interested in adding the above documentation is most welcomed!

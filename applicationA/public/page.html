@@ -12,9 +12,9 @@
 
     <script type="text/javascript">
       let win = window.frames.appB;
-      // console.log(appB);
+
       setTimeout(function(){
-          appB.contentWindow.postMessage("hi from A", "http://localhost:5000");
+          win.postMessage("hi from A", "http://localhost:5000");
         }, 2000);
       
       // win.postMessage("message", "http://localhost:5000/page.html");
@@ -22,7 +22,7 @@
         if (event.origin != 'http://localhost:5000'){
             return;
         }
-        alert(`Received ${event}`);
+        alert(`Received ${event.data}`);
       });
     </script>
 </body>

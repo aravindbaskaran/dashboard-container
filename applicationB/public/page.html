@@ -12,7 +12,8 @@
             if (event.origin != 'http://localhost:8080'){
                 return;
             }
-            // window.parent.postMessage("Hi back from B!!!!!!!", "*");
+            console.log(event.data);
+            window.parent.postMessage("Hi back from B!!!!!!!", "*");
             
       }, false);
     </script>

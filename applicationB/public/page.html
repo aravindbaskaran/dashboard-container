@@ -12,7 +12,8 @@
             if (event.origin != 'http://localhost:8080'){
                 return;
             }
-            console.log(event.data);
+            console.log('>>>>1 - print event data:',event.data);
+            console.log('>>>>>2 - print json parsed data:',JSON.parse(event.data));
             window.parent.postMessage("Hi back from B!!!!!!!", "*");
             
       }, false);

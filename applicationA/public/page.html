@@ -14,7 +14,14 @@
       let win = window.frames.appB;
 
       setTimeout(function(){
-          win.postMessage("hi from A", "http://localhost:5000");
+        var json = {payload:'Swym',
+                      data:{
+                        pid: 'qqqqqqqqqqqq',
+                        apiEndpoint: 'https://swstore.api.com'
+                      }
+                    };
+          // win.postMessage("hi from A", "http://localhost:5000");
+          win.postMessage(JSON.stringify(json), "http://localhost:5000");
         }, 2000);
       
       // win.postMessage("message", "http://localhost:5000/page.html");

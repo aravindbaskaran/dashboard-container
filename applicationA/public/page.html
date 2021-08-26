@@ -14,12 +14,22 @@
       let win = window.frames.appB;
 
       setTimeout(function(){
-        var json = {payload:'Swym',
-                      data:{
-                        pid: 'qqqqqqqqqqqq',
-                        apiEndpoint: 'https://swstore.api.com'
-                      }
-                    };
+        var json = {
+              "topic": "swym-merchant-changed",
+              "payload": {
+                "pid": "merchant pid",
+                "endpoint": "https://xxx-store-xxx.swymrelay.com",
+                "loggedInUser": {
+                  "username": "adminuser@abc.com"
+                },
+                "apps": {
+                  "Wishlist": true,
+                  "Watchlist": true
+                },
+                "platform": "",
+                "validationTokenForUser": "xxx",
+              }
+            };
           // win.postMessage("hi from A", "http://localhost:5000");
           win.postMessage(JSON.stringify(json), "http://localhost:5000");
         }, 2000);
